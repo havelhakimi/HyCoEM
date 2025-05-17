@@ -10,17 +10,18 @@ pip install -r requirements.txt
 ```
 ## Training and Inference
 To train and evaluate the model, run the following command: </br>
-`python train.py --name Checkpoint1  --dataset ED --cl_loss 1  --neg_sample 8  --enc_type roberta-base  --batch_size 64` 
+`python train.py --name Checkpoint1  --dataset ED --cl_loss 1 --cl_temp 0.07  --neg_sample 8  --enc_type roberta-base  --batch_size 64` 
 
-Some Important arguments: </br>
-- `--name` A name of the checkpoint for each run
-- `--data` name of dataset directory which contains your data and related files. Possible choices are: `go_emotion`, `ED`, and four challenging varaints of ED namely `ED_easy_4`, `ED_hard_a,` `ED_hard_b`, `ED_hard_c`, `ED_hard_d`
-- 
-- `--batch_size` batch_size for training. We set it to 64 for all datasets.
-- `--` name of dataset directory which contains your data and related files. Possible choices are `wos`, `rcv`, `bgc`  and `nyt`.
-- `--cl_loss` Set to 1 for using contrastive loss in Lorentz hyperbolic space
-- `--cl_temp` Temperature for the contarstive loss. We use a value of 0.07 for all datasets
-- `--cl_wt` weight for contrastive loss. We use the following weights for the contrastive loss across datasets: `WOS:0.3` , `RCV1-V2:0.4`, `BGC:0.4`,  and `NYT:0.6`
+### Some Important Arguments:
+- `--name` Name of the checkpoint for the run.
+- `--data` Name of the dataset directory containing the data and related files. Possible choices: `go_emotion`, `ED`, and the four challenging ED variants: `ED_easy_4`, `ED_hard_a`, `ED_hard_b`, `ED_hard_c`, `ED_hard_d`.
+- `--cl_loss` Set to `1` to enable contrastive loss in Lorentz hyperbolic space, which is then used to weight the cross-entropy loss.
+- `--cl_temp` Temperature parameter for the contrastive loss. We use a fixed value of `0.07` for all datasets.
+- `--neg_sample` Number of negative samples in the negative label set. We use `8` for ED and `6` for GoEmotions.
+- `--enc_type` Type of text encoder. Supported choices: `bert-base-uncased`, `roberta-base`, `google/electra-base-discriminator`.
+- `--batch_size` Batch size for training. We use `64` for all datasets.
+
+
 
 
 ### For Exponential map transformation and Geodesic distance calculation in Lorentz hyeprbolic space
