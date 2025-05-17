@@ -22,7 +22,7 @@ To train and evaluate the model, run the following command: </br>
 - `--batch_size` Batch size for training. We use `64` for all datasets.
 
 ### Hyperbolic Curvature Arguments
-The following arguments are not explicitly specified in the example command since their default values are used:
+The following arguments are not explicitly specified in the above example command since their default values are used:
 - `--curv_init` Initial curvature \( -k \) for the Lorentz model (with \( k > 0 \)). Default: `1`.
 - `--learn_curv` Whether to make the curvature learnable. Default: `True`.
 .
