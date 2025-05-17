@@ -9,12 +9,12 @@ The code is tested with Python 3.7.11. First, install the required dependencies:
 pip install -r requirements.txt
 ```
 ## Training and Inference
-
-`python train.py --name='Checkpoint1'  --dataset 'ED' --cl_loss 1  --neg_sample 8  --enc_type roberta-base`    --batch_size 64 
+To train and evaluate the model, run the following command:
+`python train.py --name Checkpoint1  --dataset ED --cl_loss 1  --neg_sample 8  --enc_type roberta-base  --batch_size 64` 
 
 Some Important arguments: </br>
 - `--name` A name of the checkpoint for each run
-- `--data` name of dataset directory which contains your data and related files. Possible choices are: `go_emotion`, `ED`,`ED_easy_4`, `ED_hard_a,` `ED_hard_b`, `ED_hard_c`, `ED_hard_d`
+- `--data` name of dataset directory which contains your data and related files. Possible choices are: `go_emotion`, `ED`, and four challenging varaints of ED namely `ED_easy_4`, `ED_hard_a,` `ED_hard_b`, `ED_hard_c`, `ED_hard_d`
 - 
 - `--batch_size` batch_size for training. We set it to 64 for all datasets.
 - `--` name of dataset directory which contains your data and related files. Possible choices are `wos`, `rcv`, `bgc`  and `nyt`.
