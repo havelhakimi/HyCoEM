@@ -9,7 +9,7 @@ The code is tested with Python 3.7.11. First, install the required dependencies:
 pip install -r requirements.txt
 ```
 ## Training and Inference
-To train and evaluate the model, run the following command:
+To train and evaluate the model, run the following command: </br>
 `python train.py --name Checkpoint1  --dataset ED --cl_loss 1  --neg_sample 8  --enc_type roberta-base  --batch_size 64` 
 
 Some Important arguments: </br>
