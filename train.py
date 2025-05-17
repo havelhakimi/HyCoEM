@@ -42,7 +42,7 @@ parser.add_argument('--device', type=str, default='cuda')
 
 args = parser.parse_args()
 print(args)
-print(f'./exp/{args.dataset}_b{args.batch_size}_CLwt{args.cl_wt}_temp{args.cl_temp}_N{args.neg_sample}_P{args.pool}_LCT{args.learn_curv}_seed_{args.seed}')
+print(f'./exp/logs/{args.dataset}_b{args.batch_size}')
 logging.basicConfig(filename=f'./exp/logs/{args.dataset}_b{args.batch_size}.log', level=logging.INFO)
 logging.getLogger().addHandler(logging.StreamHandler())
 
