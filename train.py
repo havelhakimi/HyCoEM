@@ -25,7 +25,6 @@ parser.add_argument('--early-stop', type=int, default=10, help='Epoch before ear
 parser.add_argument('--epochs', type=int, default=1000, help='maximum number of epochs to train for')
 parser.add_argument('--seed', type=int, default=3, help='seed for training')
 parser.add_argument('--cl_loss', default=0, type=int, help='Contarstive loss (CL) in Lorentz Hyperbolic space')
-parser.add_argument('--cl_wt', default=1, type=float, help='weight for CL loss')
 parser.add_argument('--cl_temp', default=1, type=float, help='Temperature for CL loss')
 parser.add_argument('--curv_init', type=int, default=1, help='Initial curvature (-k) for the Lorentz model, where k > 0.')
 parser.add_argument('--learn_curv', action='store_true', default=True, help='Make scalars (text_alpha, label_alpha, and curv_init) learnable.')
