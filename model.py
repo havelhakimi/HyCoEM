@@ -95,7 +95,7 @@ class PLM_hyp(nn.Module):
                 cl_loss = self.cl(sequence_output[:, 0, :], self.attention.weight, labels)
 
                 # Weighted combination of CE and contrastive loss
-                loss = self.args.cl_wt * torch.mean(cl_loss * CE_loss)
+                loss = torch.mean(cl_loss * CE_loss)
 
         return {
             'total_loss': loss,
