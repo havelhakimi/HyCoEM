@@ -18,7 +18,7 @@ To train and evaluate the model, run the following command: </br>
 - `--cl_loss` Set to `1` to enable contrastive loss in Lorentz hyperbolic space, which is then used to weight the cross-entropy loss. The loss is defined in the script `criterion.py`.
 - `--cl_temp` Temperature parameter for the contrastive loss. We use a fixed value of `0.07` for all datasets.
 - `--neg_sample` Number of negative samples in the negative label set. We use `8` for ED and `6` for GoEmotions.
-- `--enc_type` Type of text encoder. Supported choices: `bert-base-uncased`, `roberta-base`, `google/electra-base-discriminator`.
+- `--enc_type` Type of text encoder. Our model HyCoEM uses `roberta-base` as its text encoder.  Supported choices: `bert-base-uncased`, `roberta-base`, `google/electra-base-discriminator`.
 - `--batch_size` Batch size for training. We use `64` for all datasets.
 
 ### Hyperbolic Curvature Arguments
