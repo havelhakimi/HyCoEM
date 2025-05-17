@@ -8,8 +8,19 @@ The code is tested with Python 3.7.11. First, install the required dependencies:
 ```bash
 pip install -r requirements.txt
 ```
-## Training
+## Training and Inference
 
+`python train.py --name='Checkpoint1'  --dataset 'ED' --cl_loss 1  --neg_sample 8  --enc_type roberta-base`    --batch_size 64 
+
+Some Important arguments: </br>
+- `--name` A name of the checkpoint for each run
+- `--data` name of dataset directory which contains your data and related files. Possible choices are: `go_emotion`, `ED`,`ED_easy_4`, `ED_hard_a,` `ED_hard_b`, `ED_hard_c`, `ED_hard_d`
+- 
+- `--batch_size` batch_size for training. We set it to 64 for all datasets.
+- `--` name of dataset directory which contains your data and related files. Possible choices are `wos`, `rcv`, `bgc`  and `nyt`.
+- `--cl_loss` Set to 1 for using contrastive loss in Lorentz hyperbolic space
+- `--cl_temp` Temperature for the contarstive loss. We use a value of 0.07 for all datasets
+- `--cl_wt` weight for contrastive loss. We use the following weights for the contrastive loss across datasets: `WOS:0.3` , `RCV1-V2:0.4`, `BGC:0.4`,  and `NYT:0.6`
 
 
 ### For Exponential map transformation and Geodesic distance calculation in Lorentz hyeprbolic space
