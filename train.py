@@ -33,7 +33,7 @@ parser.add_argument('--pool', default=0, type=int, choices=[0, 1, 2], help='Opti
 parser.add_argument('--name', type=str, required=True, help='A name for different runs.')
 parser.add_argument('--dataset', type=str, default='ED', choices=['go_emotion', 'ED','ED_easy_4', 'ED_hard_a', 'ED_hard_b', 'ED_hard_c', 'ED_hard_d'], help='A name for different runs.')
 parser.add_argument('--lr', type=float, default=1e-5, help='Learning rate.')
-parser.add_argument('--weight_decay', type=float, default=0, help='Learning rate.')
+parser.add_argument('--weight_decay', type=float, default=0, help='Weight decay (L2 regularization) used in Adam optimizer.')
 parser.add_argument('--enc_type', type=str, default='roberta-base', choices=['bert-base-uncased','roberta-base','google/electra-base-discriminator'], help='backbone.')
 parser.add_argument('--device', type=str, default='cuda')
 
