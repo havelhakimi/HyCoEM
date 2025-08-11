@@ -31,5 +31,27 @@ The following arguments are not explicitly specified in the above example comman
 - The code for operations in lorentz geometry is in the script `lorentz.py` which is obtained from [meru](https://github.com/facebookresearch/meru/blob/main/meru/lorentz.py) repository.
 - Specifically we use the functions  `exp_map0()` and `pairwise_dist()` provided in  the script `lorentz.py`
 
+## Citation
+If you find our work helpful, please cite it using the following BibTeX entry:
+```bibtex
+@inproceedings{kumar-toshniwal-2025-semantic,
+    title = "Semantic alignment in hyperbolic space for fine-grained emotion classification",
+    author = "Kumar, Ashish  and
+      Toshniwal, Durga",
+    editor = "Zhao, Jin  and
+      Wang, Mingyang  and
+      Liu, Zhu",
+    booktitle = "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 4: Student Research Workshop)",
+    month = jul,
+    year = "2025",
+    address = "Vienna, Austria",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.acl-srw.55/",
+    doi = "10.18653/v1/2025.acl-srw.55",
+    pages = "806--813",
+    ISBN = "979-8-89176-254-1",
+   
+}
+
 ## For Contrastive loss in Lorentz hyperbolic space
 - The code for the contrastive loss and is in the script `criterion.py`, where the loss is defined as the PyTorch class `CLLoss`.
