@@ -31,6 +31,10 @@ The following arguments are not explicitly specified in the above example comman
 - The code for operations in lorentz geometry is in the script `lorentz.py` which is obtained from [meru](https://github.com/facebookresearch/meru/blob/main/meru/lorentz.py) repository.
 - Specifically we use the functions  `exp_map0()` and `pairwise_dist()` provided in  the script `lorentz.py`
 
+
+## For Contrastive loss in Lorentz hyperbolic space
+- The code for the contrastive loss and is in the script `criterion.py`, where the loss is defined as the PyTorch class `CLLoss`.
+
 ## Citation
 If you find our work helpful, please cite it using the following BibTeX entry:
 ```bibtex
@@ -53,5 +57,3 @@ If you find our work helpful, please cite it using the following BibTeX entry:
    
 }
 
-## For Contrastive loss in Lorentz hyperbolic space
-- The code for the contrastive loss and is in the script `criterion.py`, where the loss is defined as the PyTorch class `CLLoss`.
